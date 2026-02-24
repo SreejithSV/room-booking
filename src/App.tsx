@@ -5,10 +5,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import { TooltipProvider } from "./components/ui/tooltip";
 import { Toaster } from "sonner";
-import AdminPortal from "./pages/AdminPortal";
-import LoginPage from "./pages/LoginPage";
-import ReceptionPortal from "./pages/ReceptionPortal";
-// import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
+import Services from "./pages/Services";
+import Industries from "./pages/Industries";
+import About from "./pages/About";
+import Careers from "./pages/Careers";
+import Portfolio from "./pages/Portfolio";
+import { Contact } from "lucide-react";
+import Pricing from "./pages/Pricing";
+import { Footer } from "./components/layout/Footer";
+
+
 
 const queryClient = new QueryClient();
 
@@ -17,15 +24,20 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/room-booking/">
+      <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/admin" element={<AdminPortal />} />
-          <Route path="/reception" element={<ReceptionPortal />} />
-          <Route path="/login" element={<LoginPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/services" element={<Services />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/pricing" element={<Pricing />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
