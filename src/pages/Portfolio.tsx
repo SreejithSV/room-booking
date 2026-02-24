@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {  BarChart3, TrendingUp, Filter } from "lucide-react";
+import {  BarChart3, TrendingUp} from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 import dashboardMockup from "../assets/dashboard-mockup.jpg";
 
