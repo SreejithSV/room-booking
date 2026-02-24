@@ -13,7 +13,6 @@ import Careers from "./pages/Careers";
 import Portfolio from "./pages/Portfolio";
 import { Contact } from "lucide-react";
 import Pricing from "./pages/Pricing";
-import { Footer } from "./components/layout/Footer";
 
 
 
@@ -37,7 +36,6 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
-        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
